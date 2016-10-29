@@ -1,0 +1,24 @@
+---
+output: html_document
+---
+
+# UCI Human Activity Response Using Cellphones
+# Dataset Processing and Cleaning
+
+***
+This repository contains the script necessary to extract the UCI HAR dataset, convert it into tidy data, and save is as a .csv file.
+
+## Usage
+
+1. Download the data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+2. Unzip the file UCI HAR Dataset into a folder named **UCI HAR Dataset** in your R working directory.
+3. Open and source the **run_analysis.r** script to create the dataset.
+
+## What the Script Does
+
+1. Combine the testing, training, subject, and activity datasets.
+2. Apply and clean up variable names.
+3. Extract only data relevant to mean and standard deviation of each measurement.
+4. Clean up the workspace.
+5. Create a second, separate dataset, containing the means of each measurement for each subject and activity.
+6. Write each dataset to a .csv file, "UCI_HAR_Data.csv", and "UCI_HAR_Tidy.csv".

@@ -1,0 +1,106 @@
+# UCI HAR Data Analysis codebook
+
+## Initial Data
+The initial dataset is available from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+After unzipping the file, the following .txt files are available:
+
+* activity_labels.txt - labels for the included
+* features.txt - names for the tested variables
+* features_info.txt - descriptions of the variable names
+* README.txt - description of initial experiments and processing
+
+## This Codebook
+This codebook updates and modifies the README.txt included in the initial dataset. It describes the processing performed by the run_analysis.R script.
+
+## Processing
+The script accomplishes the following steps:
+
+* Combine the training and testing datasets, with the subjects and activity data, "dat".
+* Attach the variable names to the dataset.
+* Extract only the measures of mean and standard deviation for each measurement.
+* Clean up variable names.
+* Convert activity factors to activity names.
+* Create a second, independent dataset with the average (mathematical mean) of each variable for each activity and each subject, "tidy.dat".
+* Save the R code necessary to recreate the datasets in two .txt files "UCI_HAR_Data.csv", and "UCI_HAR_Tidy.csv".
+
+## The Variables
+The variables extracted from the initial UCI HAR dataset are:
+
+* Time_Body_Accelerometer_mean_X
+* Time_Body_Accelerometer_mean_Y
+* Time_Body_Accelerometer_mean_Z
+* Time_Body_Accelerometer_std.dev_X
+* Time_Body_Accelerometer_std.dev_Y
+* Time_Body_Accelerometer_std.dev_Z
+* Time_Gravity_Accelerometer_mean_X
+* Time_Gravity_Accelerometer_mean_Y
+* Time_Gravity_Accelerometer_mean_Z
+* Time_Gravity_Accelerometer_std.dev_X
+* Time_Gravity_Accelerometer_std.dev_Y
+* Time_Gravity_Accelerometer_std.dev_Z
+* Time_Body_Accelerometer_Jerk_mean_X
+* Time_Body_Accelerometer_Jerk_mean_Y
+* Time_Body_Accelerometer_Jerk_mean_Z
+* Time_Body_Accelerometer_Jerk_std.dev_X
+* Time_Body_Accelerometer_Jerk_std.dev_Y
+* Time_Body_Accelerometer_Jerk_std.dev_Z
+* Time_Body_Gyrometer_mean_X
+* Time_Body_Gyrometer_mean_Y
+* Time_Body_Gyrometer_mean_Z
+* Time_Body_Gyrometer_std.dev_X
+* Time_Body_Gyrometer_std.dev_Y
+* Time_Body_Gyrometer_std.dev_Z
+* Time_Body_Gyrometer_Jerk_mean_X
+* Time_Body_Gyrometer_Jerk_mean_Y
+* Time_Body_Gyrometer_Jerk_mean_Z
+* Time_Body_Gyrometer_Jerk_std.dev_X
+* Time_Body_Gyrometer_Jerk_std.dev_Y
+* Time_Body_Gyrometer_Jerk_std.dev_Z
+* Time_Body_Accelerometer_Magnitude_mean
+* Time_Body_Accelerometer_Magnitude_std.dev
+* Time_Gravity_Accelerometer_Magnitude_mean
+* Time_Gravity_Accelerometer_Magnitude_std.dev
+* Time_Body_Accelerometer_Jerk_Magnitude_mean
+* Time_Body_Accelerometer_Jerk_Magnitude_std.dev
+* Time_Body_Gyrometer_Magnitude_mean
+* Time_Body_Gyrometer_Magnitude_std.dev
+* Time_Body_Gyrometer_Jerk_Magnitude_mean
+* Time_Body_Gyrometer_Jerk_Magnitude_std.dev
+* Frequency_Body_Accelerometer_mean_X
+* Frequency_Body_Accelerometer_mean_Y
+* Frequency_Body_Accelerometer_mean_Z
+* Frequency_Body_Accelerometer_std.dev_X
+* Frequency_Body_Accelerometer_std.dev_Y
+* Frequency_Body_Accelerometer_std.dev_Z
+* Frequency_Body_Accelerometer_Jerk_mean_X
+* Frequency_Body_Accelerometer_Jerk_mean_Y
+* Frequency_Body_Accelerometer_Jerk_mean_Z
+* Frequency_Body_Accelerometer_Jerk_std.dev_X
+* Frequency_Body_Accelerometer_Jerk_std.dev_Y
+* Frequency_Body_Accelerometer_Jerk_std.dev_Z
+* Frequency_Body_Gyrometer_mean_X
+* Frequency_Body_Gyrometer_mean_Y
+* Frequency_Body_Gyrometer_mean_Z
+* Frequency_Body_Gyrometer_std.dev_X
+* Frequency_Body_Gyrometer_std.dev_Y
+* Frequency_Body_Gyrometer_std.dev_Z
+* Frequency_Body_Accelerometer_Magnitude_mean
+* Frequency_Body_Accelerometer_Magnitude_std.dev
+* Frequency_Body_Accelerometer_Jerk_Magnitude_mean
+* Frequency_Body_Accelerometer_Jerk_Magnitude_std.dev
+* Frequency_Body_Gyrometer_Magnitude_mean
+* Frequency_Body_Gyrometer_Magnitude_std.dev
+* Frequency_Body_Gyrometer_Jerk_Magnitude_mean
+* Frequency_Body_Gyrometer_Jerk_Magnitude_std.dev
+
+The activity_type variable can take the values of:
+
+* Standing
+* Sitting
+* Laying
+* Walking
+* walking_downstairs
+* walking_upstairs
+
+The subject variable is the number assigned to each human subject tested and can take numeric values from 1-30.
